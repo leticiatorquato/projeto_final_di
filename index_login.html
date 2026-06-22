@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="logo">
+    </header>
+    <div id="acessibilidade">
+        <button id="modoContraste" aria-label="Alternar modo claro e escuro">
+            🌙
+        </button>
+        <button id="aumentarFonte" aria-label="Aumentar tamanho da fonte">
+            A+
+        </button>
+    </div>
+    <h1>
+        Faça seu login e bons estudos!
+    </h1>
+    <form action="enviar_login">
+        <label for="email">E-mail</label> <br>
+        <input type="text"><br>
+        <label for="senha">Senha</label> <br>
+        <input type="text"><br>
+        <div id="botao">
+            <a id="botao_entrar" href="index_salaonline.html">Entrar</a>
+        </div>
+        <a href="">Esqueci minha senha</a>
+    </form>
+    <script src="acessibilidade.js"></script>
+</body>
+</html>

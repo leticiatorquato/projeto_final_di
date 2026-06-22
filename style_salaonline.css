@@ -1,0 +1,352 @@
+:root {
+    --bg-body: #FFEBD5;
+    --bg-section: #ffffff;
+    --bg-highlight: #DC6665;
+    --text-main: #000000;
+    --text-inverse: #ffffff;
+    --link-light: #ffffff;
+    --link-dark: #000000;
+    --link-hover-bg: rgba(0, 0, 0, 0.08);
+}
+
+body.dark {
+    --bg-body: #121212;
+    --bg-section: #1e1e1e;
+    --bg-highlight: #6d2f2f;
+    --text-main: #ffffff;
+    --text-inverse: #ffffff;
+    --link-light: #ffffff;
+    --link-dark: #ffffff;
+    --link-hover-bg: rgba(255, 255, 255, 0.12);
+}
+
+#acessibilidade {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+#acessibilidade button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+body.dark #acessibilidade button {
+    background-color: #fff;
+    color: #000;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+}
+
+header{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 1.5em;
+}
+
+h1{
+    font-size: 38px;
+}
+
+#links_header{
+    display: flex;
+    gap: 3em;  
+}
+
+a{
+    color: var(--text-main);
+    font-size: 20px;
+}
+
+#avisos{
+    background-color: var(--bg-highlight);
+    color: var(--text-inverse);
+    margin: 1em;
+    border-radius: 30px;
+    padding: 1em 2em 3em 2em;
+}
+
+#conteudo_avisos{
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center; 
+    padding: 2em;
+    gap: 1em;
+    margin: 2em;
+}
+
+.seta{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.seta:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+#avisos-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+#avisos-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.aviso-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+#link_aula{
+    background-color: var(--bg-section);
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    border-radius: 30px;
+    padding: 1em 2em 3em 2em;
+}
+
+#conteudo_link_aula{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    margin: 2em;
+}
+
+#link_aula_meet{
+    font-size: 23px;
+    font-weight: 700;
+}
+
+#materiais{
+    background-color: var(--bg-highlight);
+    color: var(--text-inverse);
+    margin: 1em;
+    border-radius: 30px;
+    padding: 1em 2em 3em 2em;
+}
+
+.img_material, .img_aula_gravada{
+    width: 90px;
+}
+
+.icones_materiais, .icones_aulas_gravadas{
+    display: flex;
+    justify-content:space-around;
+    padding: 2em;
+}
+
+#link_material, #link_atividades{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1em;
+    color: var(--text-inverse);
+}
+
+.link_pdfs_materiais{
+    text-decoration: none;
+   color: var(--text-inverse);
+    font-size: 16.2px;
+}
+
+#aulas_gravadas{
+    background-color: var(--bg-section);
+    margin: 1em;
+    border-radius: 30px;
+    padding: 1em 2em 3em 2em;
+}
+
+#link_aulas_gravadas, #link_provas{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1em;
+}
+
+.link_video_aula{
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 16.2px;
+}
+
+.icones_salaonline{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#atividades{
+    background-color: var(--bg-highlight);
+    margin: 1em;
+    border-radius: 30px;
+    padding: 1em 2em 3em 2em;
+    color: var(--text-inverse);
+}
+
+#lista_atividades {
+    list-style: none;
+    padding: 0;
+}
+
+#lista_atividades li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+#lista_atividades input[type="checkbox"] {
+    display: none;
+}
+
+#lista_atividades label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+#lista_atividades label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--text-inverse);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+#lista_atividades input[type="checkbox"]:checked + label::before {
+    background-color: var(--text-inverse);
+}
+
+
+#lista_atividades input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+.link_material_atividades{
+    text-decoration: none;
+    color: var(--text-inverse);
+    font-size: 24px;
+}
+
+#provas{
+    background-color: var(--bg-section);
+    margin: 1em;
+    border-radius: 30px;
+    padding: 1em 2em 3em 2em;
+}
+
+
+#lista_provas{
+    list-style: none;
+    padding: 0;
+}
+
+
+#lista_provas li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+
+#lista_provas input[type="checkbox"] {
+    display: none;
+}
+
+
+#lista_provas label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+
+#lista_provas label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--text-main);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+
+#lista_provas input[type="checkbox"]:checked + label::before {
+    background-color: var(--text-main);
+}
+
+
+#lista_provas input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+.link_material_prova{
+    text-decoration: none;
+    font-size: 24px;
+}
+
+#treino_fonetico{
+    background-color: var(--bg-highlight);
+    color: var(--text-inverse);
+    margin: 1em;
+    border-radius: 30px;
+    padding: 1em 1em 3em 1em;
+}
+
+#conteudo_treinofonetico{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+#link_treinofonetico{
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+footer{
+    background-color: var(--bg-highlight);
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: 700;
+    color: #ffff;
+}
