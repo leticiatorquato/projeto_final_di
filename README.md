@@ -12,7 +12,7 @@ O site foi desenvolvido utilizando **HTML, CSS e JavaScript**, com atenção à 
 
 O projeto pode ser acessado pelo link:
 
-👉 https://leticiatorquato.github.io/projeto_final_di/
+👉 https://leticiatorquato.github.io/projeto-site-institucional-ingles/
 
 ---
 
